@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 100 100" viewBox="0 0 100 100" id="play-button">
+  <switch>
+    <g>
+      <!-- Green Circle -->
+      <circle cx="50" cy="50" r="48" fill="#00FF00"/>
+      <!-- Black Triangle Play Button -->
+      <polygon points="35,25 65,50 35,75" fill="#000000"/>
+    </g>
+  </switch>
+</svg>
