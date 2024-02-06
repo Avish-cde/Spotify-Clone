@@ -6,7 +6,7 @@ let songs;
 function formatSeconds(seconds) {
   // Ensure seconds is a non-negative integer
   if (isNaN(seconds) || seconds < 0) {
-    return "";
+    return "00:00";
   }
 
   // Calculate minutes and remaining seconds
@@ -101,7 +101,7 @@ async function main() {
   // Listen to the time update event
   currentSong.addEventListener("timeupdate",()=>{
     // console.log(currentSong.currentTime, currentSong.duration);
-    document.querySelector(".songtime").innerHTML= `${formatSeconds(currentSong.currentTime)} / ${formatSeconds(currentSong.duration)}`
+    document.querySelector(".songtime").innerHTML= `${formatSeconds(currentSong.currentTime)}/${formatSeconds(currentSong.duration)}`
     document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) *100 + "%";
   })
 
@@ -125,23 +125,32 @@ async function main() {
 
   // Add an event listner to previous button
   previous.addEventListener("click",()=>{
-    console.log(songs)
-    console.log("previous clicked")
-    let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-    if((index+-1)>0){
-      playMusic(songs[index+1])
-    }
+    console.log("Previous clicked")
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        if ((index - 1) >= 0) {
+            playMusic(songs[index - 1])
+        }
   })
 
   // Add an event listner to next button
   next.addEventListener("click",()=>{
     console.log("next clicked")
     let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-    if((index+1)<length){
+    if((index+1)<songs.length){
       playMusic(songs[index+1])
     }
     
   })
+  // Add an event to volume
+  // Add an event to volume
+  document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e) => {
+    console.log("Setting volume to", e.target.value, "/ 100")
+    currentSong.volume = parseInt(e.target.value) / 100
+    if (currentSong.volume >0){
+      document.querySelector(".volume>img").src = document.querySelector(".volume>img").src.replace("mute.svg", "volume.svg")
+  }
+
+})
 }
 
 

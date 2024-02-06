@@ -30,7 +30,7 @@
                         Your Library
                     </h2>
                 </div>
-                <div class="songlist">width="30"
+                <div class="songlist" width="40">
                     <ul>
                     </ul>
                 </div>
@@ -64,20 +64,27 @@
                 </div>
             </div>
             <div class="spotifyPlaylist">
-                <h1>Spotify Playlists</h1>
+                <h2>Spotify Playlists</h2>
                 <div class="cardContainer">
-                    <div class="card">
+                    <div data-folder="ncs" class="card">
                         <img class="playsvg" src="play.svg" alt="">
                         <img class="image" src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d"
                             alt="">
-                        <h2>Happy Hits!</h2>
+                        <h3>Happy Hits!</h3>
                         <p>Hits to boost your mood and fill you with happiness!</p>
                     </div>
-                    <div class="card ">
+                    <div data-folder="Animal" class="card ">
                         <img class="playsvg" src="play.svg" alt="">
                         <img class="image" src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d"
                             alt="">
-                        <h2>Happy Hits!</h2>
+                        <h3>Happy Hits!</h3>
+                        <p>Hits to boost your mood and fill you with happiness!</p>
+                    </div>
+                    <div data-folder="Fighter" class="card ">
+                        <img class="playsvg" src="play.svg" alt="">
+                        <img class="image" src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d"
+                            alt="">
+                        <h3>Happy Hits!</h3>
                         <p>Hits to boost your mood and fill you with happiness!</p>
                     </div>
 
@@ -96,8 +103,16 @@
                         <img width="30"id="play" src="playicon.svg" alt="">
                         <img width="30"id="next" src="nextsong.svg" alt="">
                     </div>
-                    <div class="songtime">
-                        
+                    <div class="timevol flex">
+                        <div class="songtime">
+                            
+                        </div>
+                        <div class="volume">
+                            <img src="volume.svg" alt="">
+                            <div class="range">
+                                <input type="range" name="volume">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
