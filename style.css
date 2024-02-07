@@ -165,7 +165,7 @@ body{
     --a :1;
     cursor: pointer;
     background-color:#302f2f ;
-    transition: all 0.3s ease-in-out;
+    transition: all 1 s ease-in-out;
 }
 .playsvg{
     opacity:var(--a);
