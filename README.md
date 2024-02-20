@@ -6,6 +6,7 @@ Openspotify is a web application that allows users to browse and play songs from
 
 - Browse and play songs from different albums.
 - Control playback with play, pause, next, and previous buttons.
+- Hamburger Functionality involved.
 - Adjust volume using a range slider.
 - Responsive design for various screen sizes.
 
